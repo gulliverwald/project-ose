@@ -1,0 +1,26 @@
+CompileFlags:
+  Add: 
+    - -Wall
+    - -Wextra
+    - -std=c++17
+  Remove: 
+    - -march=*
+    - -mtune=*
+
+Index:
+  Background: Build
+
+Diagnostics:
+  ClangTidy:
+    Add: 
+      - readability-*
+      - performance-*
+      - modernize-*
+      - bugprone-*
+    Remove: 
+      - modernize-use-trailing-return-type
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true

@@ -1,0 +1,65 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Desktop",
+            "type": "shell",
+            "command": "./build.sh",
+            "args": ["desktop", "Debug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build desktop version with debug symbols"
+        },
+        {
+            "label": "Build Desktop Release",
+            "type": "shell",
+            "command": "./build.sh",
+            "args": ["desktop", "Release"],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build desktop version optimized for release"
+        },
+        {
+            "label": "Build Desktop Windows",
+            "type": "shell",
+            "command": "./scripts/build.bat",
+            "args": ["desktop", "Release"],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build desktop version optimized for release"
+        },
+        {
+            "label": "Build 3DS",
+            "type": "shell",
+            "command": "./build.sh",
+            "args": ["3ds", "Release"],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build Nintendo 3DS version"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "rm",
+            "args": ["-rf", "build"],
+            "group": "build",
+            "detail": "Clean all build directories"
+        },
+        {
+            "label": "Generate Compile Commands",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S", ".",
+                "-B", "build/desktop",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "group": "build",
+            "detail": "Generate compile_commands.json for clangd"
+        }
+    ]
+}

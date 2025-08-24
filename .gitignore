@@ -1,0 +1,49 @@
+# Directories
+.vs/
+bin/
+
+# Files
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+*.log
+Makefile
+
+# Exclude
+!vendor/binaries
+
+build/
+*.user
+*.suo
+*.vcxproj.user
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# CMakeCache.txt and CMakeFiles
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled binaries
+*.exe
+*.3dsx
+*.elf
+*.cia
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+
+# Keep .vscode configuration but ignore user-specific settings
+!.vscode/
+.vscode/ipch/
+.vscode/.browse.c_cpp.db*
+.vscode/launch.json.user

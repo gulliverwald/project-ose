@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "name": "Desktop",
+            "includePath": [
+                "${workspaceFolder}/source/core/include",
+                "${workspaceFolder}/external/raylib/src",
+                "${workspaceFolder}/build/desktop/_deps/raylib-src/src"
+            ],
+            "defines": [
+                "PLATFORM_DESKTOP"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "compileCommands": "${workspaceFolder}/build/desktop/compile_commands.json"
+        },
+        {
+            "name": "3DS",
+            "includePath": [
+                "${workspaceFolder}/source/core/include",
+                "${workspaceFolder}/external/raylib/src",
+                "/opt/devkitpro/devkitARM/arm-none-eabi/include",
+                "/opt/devkitpro/libctru/include",
+                "/opt/devkitpro/citro3d/include"
+            ],
+            "defines": [
+                "PLATFORM_3DS",
+                "ARM11",
+                "__3DS__"
+            ],
+            "compilerPath": "/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "compileCommands": "${workspaceFolder}/build/3ds/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

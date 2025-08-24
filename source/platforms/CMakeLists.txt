@@ -1,0 +1,5 @@
+if(PLATFORM_DESKTOP)
+    add_subdirectory(desktop)
+# elseif(PLATFORM_3DS)
+#     add_subdirectory(3ds)
+endif()
