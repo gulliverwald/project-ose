@@ -4,7 +4,7 @@
 
 typedef struct 
 {
-    char name[4];
-    int8_t bonus;
-    char description[256];
+    char name[4]; 
+    int8_t bonus; 
+    char description[251];
 } Skill;
